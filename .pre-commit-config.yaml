@@ -1,0 +1,42 @@
+exclude: >-
+  (Pipfile\.lock|CHANGELOG\.md|Makefile|solution|test|appendix|bin|docker|extra|input|template|01_hello/hello0|07_gashlycrumb/gashlycrumb|18_gematria/asciitbl|20_password/harvest|using|typehints|unit|manual|README)
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v4.1.0"
+    hooks:
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: no-commit-to-branch
+        args: ["-b", "master"]
+  - repo: https://github.com/pycqa/isort
+    rev: "5.10.1"
+    hooks:
+      - id: isort
+  - repo: https://github.com/psf/black
+    rev: "22.1.0"
+    hooks:
+      - id: black
+  - repo: https://github.com/flakeheaven/flakeheaven
+    rev: "0.11.0"
+    hooks:
+      - id: flakeheaven
+  - repo: https://github.com/executablebooks/mdformat
+    rev: "0.7.13"
+    hooks:
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-beautysh
+          - mdformat-tables
+        exclude: ^docs\/(index|changelog)\.md$
+  - repo: https://github.com/rhysd/actionlint
+    rev: "v1.6.9"
+    hooks:
+      - id: actionlint-docker
