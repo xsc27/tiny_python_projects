@@ -108,9 +108,12 @@ def run(input_seq, codons, expected):
     random_file = random_filename()
     try:
         flip = random.randint(0, 1)
-        out_file, out_arg = (random_file,
-                             '-o ' + random_file) if flip == 1 else ('out.txt',
-                                                                     '')
+        out_file, out_arg = (
+            (random_file, f'-o {random_file}')
+            if flip == 1
+            else ('out.txt', '')
+        )
+
         print(f'{prg} -c {codons} {out_arg} {input_seq}')
         rv, output = getstatusoutput(f'{prg} -c {codons} {out_arg} {input_seq}')
 

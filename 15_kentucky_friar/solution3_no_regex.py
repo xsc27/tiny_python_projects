@@ -41,9 +41,10 @@ def fry(word):
     if word.lower() == 'you':
         return word[0] + "'all"
 
-    if word.endswith('ing'):
-        if any(map(lambda c: c.lower() in 'aeiouy', word[:-3])):
-            return word[:-1] + "'"
+    if word.endswith('ing') and any(
+        map(lambda c: c.lower() in 'aeiouy', word[:-3])
+    ):
+        return word[:-1] + "'"
 
     return word
 
