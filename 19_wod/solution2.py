@@ -85,8 +85,7 @@ def read_csv(fh):
     for row in csv.DictReader(fh, delimiter=','):
         name, reps = row.get('exercise'), row.get('reps')
         if name and reps:
-            match = re.match(r'(\d+)-(\d+)', reps)
-            if match:
+            if match := re.match(r'(\d+)-(\d+)', reps):
                 low, high = map(int, match.groups())
                 exercises.append((name, low, high))
 

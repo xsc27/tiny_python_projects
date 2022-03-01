@@ -123,10 +123,10 @@ def test_options():
         files = os.listdir(out_dir)
         assert len(files) == 3
 
-        seqs_written = 0
-        for file in files:
-            seqs_written += len(
-                list(SeqIO.parse(os.path.join(out_dir, file), 'fasta')))
+        seqs_written = sum(
+            len(list(SeqIO.parse(os.path.join(out_dir, file), 'fasta')))
+            for file in files
+        )
 
         assert seqs_written == 27688
     finally:

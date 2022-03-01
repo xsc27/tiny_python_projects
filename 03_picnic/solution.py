@@ -42,7 +42,7 @@ def main():
     elif num == 2:
         bringing = ' and '.join(items)
     else:
-        items[-1] = 'and ' + items[-1]
+        items[-1] = f'and {items[-1]}'
         bringing = ', '.join(items)
 
     print('You are bringing {}.'.format(bringing))

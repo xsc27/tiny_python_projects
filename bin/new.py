@@ -180,8 +180,7 @@ def get_defaults():
     defaults = {}
     if os.path.isfile(rc):
         for line in open(rc):
-            match = re.match('([^=]+)=([^=]+)', line)
-            if match:
+            if match := re.match('([^=]+)=([^=]+)', line):
                 key, val = map(str.strip, match.groups())
                 if key and val:
                     defaults[key] = val
