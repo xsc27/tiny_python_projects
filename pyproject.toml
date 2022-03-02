@@ -1,0 +1,184 @@
+[tool.bandit]
+exclude = ['tests']
+
+[tool.black]
+line-length = 98
+target-version = ['py310']
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+show_missing = true
+
+[tool.flakeheaven]
+exclude=[
+    '.venv',
+    '01_hello/hello01_print.py',
+    '01_hello/hello02_comment.py',
+    '01_hello/hello03_shebang.py',
+    '01_hello/hello04_argparse_positional.py',
+    '01_hello/hello05_argparse_option.py',
+    '01_hello/hello06_main_function.py',
+    '01_hello/hello07_get_args.py',
+    '01_hello/hello08_formatted.py',
+    '01_hello/test.py',
+    '02_crowsnest/solution.py',
+    '02_crowsnest/test.py',
+    '03_picnic/solution.py',
+    '03_picnic/test.py',
+    '04_jump_the_five/solution1.py',
+    '04_jump_the_five/solution2.py',
+    '04_jump_the_five/solution3.py',
+    '04_jump_the_five/solution4.py',
+    '04_jump_the_five/solution5.py',
+    '04_jump_the_five/test.py',
+    '05_howler/solution1.py',
+    '05_howler/solution2.py',
+    '05_howler/test.py',
+    '06_wc/solution.py',
+    '06_wc/test.py',
+    '07_gashlycrumb/gashlycrumb_interactive.py',
+    '07_gashlycrumb/solution1.py',
+    '07_gashlycrumb/solution2_dict_comp.py',
+    '07_gashlycrumb/solution3_dict_get.py',
+    '07_gashlycrumb/test.py',
+    '08_apples_and_bananas/solution1_iterate_chars.py',
+    '08_apples_and_bananas/solution2_str_replace.py',
+    '08_apples_and_bananas/solution3_str_translate.py',
+    '08_apples_and_bananas/solution4_list_comprehension.py',
+    '08_apples_and_bananas/solution5.1_no_closure.py',
+    '08_apples_and_bananas/solution5_list_comp_function.py',
+    '08_apples_and_bananas/solution6_map_lambda.py',
+    '08_apples_and_bananas/solution7_map_function.py',
+    '08_apples_and_bananas/solution8_regex.py',
+    '08_apples_and_bananas/test.py',
+    '09_abuse/solution.py',
+    '09_abuse/test.py',
+    '10_telephone/solution1.py',
+    '10_telephone/solution2_list.py',
+    '10_telephone/test.py',
+    '11_bottles_of_beer/solution.py',
+    '11_bottles_of_beer/test.py',
+    '12_ransom/solution1_for_loop.py',
+    '12_ransom/solution2_for_append_list.py',
+    '12_ransom/solution3_for_append_string.py',
+    '12_ransom/solution4_list_comprehension.py',
+    '12_ransom/solution5_shorter_list_comp.py',
+    '12_ransom/solution6_map.py',
+    '12_ransom/solution7_shorter_map.py',
+    '12_ransom/test.py',
+    '13_twelve_days/solution.py',
+    '13_twelve_days/solution_emoji.py',
+    '13_twelve_days/test.py',
+    '14_rhymer/solution1_regex.py',
+    '14_rhymer/solution2_no_regex.py',
+    '14_rhymer/solution3_dict_words.py',
+    '14_rhymer/test.py',
+    '15_kentucky_friar/solution1_regex.py',
+    '15_kentucky_friar/solution2_re_compile.py',
+    '15_kentucky_friar/solution3_no_regex.py',
+    '15_kentucky_friar/test.py',
+    '16_scrambler/solution.py',
+    '16_scrambler/test.py',
+    '17_mad_libs/solution1_regex.py',
+    '17_mad_libs/solution2_no_regex.py',
+    '17_mad_libs/test.py',
+    '18_gematria/asciitbl.py',
+    '18_gematria/solution.py',
+    '18_gematria/test.py',
+    '19_wod/manual1.py',
+    '19_wod/manual2_list_comprehension.py',
+    '19_wod/manual3_map.py',
+    '19_wod/solution1.py',
+    '19_wod/solution2.py',
+    '19_wod/test.py',
+    '19_wod/unit.py',
+    '19_wod/using_csv1.py',
+    '19_wod/using_csv2.py',
+    '19_wod/using_csv3.py',
+    '19_wod/using_pandas.py',
+    '20_password/harvest.py',
+    '20_password/solution.py',
+    '20_password/test.py',
+    '20_password/unit.py',
+    '21_tictactoe/solution1.py',
+    '21_tictactoe/solution2.py',
+    '21_tictactoe/test.py',
+    '21_tictactoe/unit.py',
+    '22_itictactoe/solution1.py',
+    '22_itictactoe/solution2_typed_dict.py',
+    '22_itictactoe/typehints.py',
+    '22_itictactoe/typehints2.py',
+    '22_itictactoe/unit.py',
+    'appendix_argparse/cat_n.py',
+    'appendix_argparse/cat_n_manual.py',
+    'appendix_argparse/choices.py',
+    'appendix_argparse/manual.py',
+    'appendix_argparse/nargs+.py',
+    'appendix_argparse/nargs2.py',
+    'appendix_argparse/one_arg.py',
+    'appendix_argparse/two_args.py',
+    'bin/new.py',
+    'extra/02_dna/test.py',
+    'extra/02_spanish/test.py',
+    'extra/02_strings/test.py',
+    'extra/03_lister/test.py',
+    'extra/04_days/test.py',
+    'extra/06_head/test.py',
+    'extra/07_proteins/test.py',
+    'extra/08_rna/test.py',
+    'extra/09_moog/test.py',
+    'extra/10_whitmans/solution.py',
+    'extra/10_whitmans/test.py',
+    'template/template.py',
+]
+
+[tool.flakeheaven.plugins]
+dlint = ['+*']
+# flake8-bandit = ['+*']
+flake8-bugbear = ['+*']
+flake8-comprehensions = ['+*']
+# flake8-darglint = ['+*',]
+flake8-debugger = ['+*']
+flake8-docstrings = ['+*']
+flake8-eradicate = ['+*']
+flake8-pytest-style = ['+*']
+flake8-rst-docstrings = ['+*']
+mccabe = ['+*']
+pep8-naming = ['+*']
+pyflakes = ['+*']
+
+[tool.isort]
+profile = 'black'
+line_length = 98
+
+[tool.pydocstyle]
+convention = 'google'
+
+[tool.pylint.config]
+max-line-length = 98
+persistent = 'no'
+enable = [
+    'F',  # Fatal
+    'E',  # Error
+    'W',  # Warning
+    'C',  # Convention
+    'I',  # Informational
+]
+disable = [
+    # 'R',  # Refactor
+    'too-many-instance-attributes',
+    'fixme',
+    'locally-disabled',
+    'no-absolute-import',
+    'suppressed-message',
+]
+
+[tool.pytest.ini_options]
+addopts = '--verbosity=2 --doctest-modules --ignore=docs --showlocals -rfp --strict-markers --cov-report=term'
+log_cli = true
+log_level = 'DEBUG'
+log_cli_level = 'INFO'
+log_file_level = 'DEBUG'
