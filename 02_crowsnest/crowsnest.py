@@ -6,6 +6,7 @@ import sys
 from typing import Any
 
 SIDES = ("larboard", "starboard")
+VOWELS = ("a", "e", "i", "o", "u")
 
 
 def get_args(args: list[Any] | None = None) -> argparse.Namespace:
@@ -53,7 +54,7 @@ def get_message(word: str, side: str) -> str:
     >>> get_message("Shamu", "starboard")
     'Ahoy, Captain, A Shamu off the starboard bow!'
     """
-    article = "an" if word.casefold().startswith(("a", "e", "i", "o", "u")) else "a"
+    article = "an" if word.casefold().startswith(VOWELS) else "a"
     article = article if word.islower() else article.title()
     return f"Ahoy, Captain, {article} {word} off the {side} bow!"
 
