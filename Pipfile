@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+black = "*"
+pylint = "*"
+isort = "*"
+pytest-cov = "*"
+flakeheaven = "*"
+dlint = "*"
+flake8-bugbear = "*"
+flake8-comprehensions = "*"
+flake8-debugger = "*"
+flake8-docstrings = "*"
+flake8-eradicate = "*"
+flake8-pytest-style = "*"
+flake8-rst-docstrings = "*"
+pep8-naming = "*"
+
+[requires]
+python_version = "3.11"
