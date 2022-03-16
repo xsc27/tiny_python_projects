@@ -49,7 +49,7 @@ def get_args(args: list[Any] | None = None) -> argparse.Namespace:
 
 
 def get_encoded(string: str, jumper: dict[str, Any] = JUMPER[0]) -> str:
-    return "".join(jumper.get(c, "") if c.isnumeric() else c for c in string)
+    return "".join(jumper.get(c, c) for c in string)
 
 
 def main():
